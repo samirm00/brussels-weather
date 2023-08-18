@@ -1,30 +1,85 @@
-body {
-    background-color: rgb(33, 32, 32);
-    color: white;
-    font-size: 23px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-#root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    width: 600px;
-    text-align: center;
-}
-
-.card h2 {
-    color: #333;
+*,
+*::before,
+*::after {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #212122;
+}
+.data-container {
+    font-family: Arial, sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.data-city {
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.data-title {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.day {
+    margin-bottom: 20px;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.day-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.temp-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-right: 20px;
+}
+
+.hour-data-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.hour-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #444;
+    border: 1px solid #555;
+}
+
+.hour {
+    flex-basis: 85%;
+}
+
+.temp {
+    flex-basis: 10%;
+    text-align: right;
+}
+
+.green {
+    color: green;
+}
+.red {
+    color: red;
 }

@@ -1,6 +1,6 @@
-# Get Albums
+# Get Weather
 
-> A simple website allows the user to get albums.
+> A simple website show the temperature per hour for Brussels city .
 
 ## Table of contents
 
@@ -36,22 +36,25 @@
 ## Code Examples
 
 ```js
-const getAlbums = async () => {
-  const url = 'https://jsonplaceholder.typicode.com/albums';
+const getWeather = async () => {
+  const url =
+    'https://api.open-meteo.com/v1/forecast?latitude=50.8503&longitude=4.3517&hourly=temperature_2m';
   try {
     const res = await fetch(url);
     if (!res.ok) {
-      throw new Error(`Failed to fetch albums with status : ${res.status}`);
+      throw new Error(
+        `Failed to fetch weather info with status : ${res.status}`,
+      );
     }
 
-    const albums = await res.json();
-    return albums;
+    const data = await res.json();
+    return data;
   } catch (err) {
     console.error(err);
   }
 };
 
-export default getAlbums;
+export default getWeather;
 ```
 
 ## Features

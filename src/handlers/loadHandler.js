@@ -1,14 +1,13 @@
-import getAlbums from '../../apis/getAlbums.js';
-import createAlbum from '../components/createAlbum.js';
 import dom from '../dom.js';
+import getWeather from '../../apis/getWeather.js';
+import organizeWeather from '../utils/organizeWeather.js';
+import createWeather from '../components/createWeather.js';
 
 const loadHandler = async () => {
-    const albums = await getAlbums();
-
-    albums.forEach((albumData) => {
-        const albumDom = createAlbum(albumData);
-        dom.root.append(albumDom);
-    });
+    const data = await getWeather();
+    const newData = organizeWeather(data);
+    const weatherDom = createWeather(newData);
+    dom.root.append(weatherDom);
 };
 
 export default loadHandler;
