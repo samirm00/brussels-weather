@@ -69,7 +69,7 @@ body {
 }
 
 .hour {
-    flex-basis: 85%;
+    flex-basis: 75%;
 }
 
 .temp {
@@ -82,4 +82,8 @@ body {
 }
 .red {
     color: red;
+}
+
+.hide {
+    visibility: hidden;
 }
