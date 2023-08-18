@@ -83,6 +83,15 @@ body {
 .red {
     color: red;
 }
+.yellow {
+    color: yellow;
+}
+.grey {
+    color: grey;
+}
+.black {
+    color: black;
+}
 
 .hide {
     visibility: hidden;
